@@ -8,15 +8,15 @@ def main(data, modelName, plotName, eta, epochs):
     ## Claculating OR_GATE
     X, y = prepare_data(df_OR)
 
-    model_or = Perceptron(eta=eta, epochs=epochs)
-    model_or.fit(X, y)
+    model = Perceptron(eta=eta, epochs=epochs)
+    model.fit(X, y)
 
-    _ = model_or.total_loss()
+    _ = model.total_loss()
 
     ## Saving model
 
-    model_or.save(filename="or.model", model_dir="model")
-    save_plot(df_OR, model_or, filename='or.png')
+    model.save(filename="or.model", model_dir="model")
+    save_plot(df_OR, model, filename='or.png')
 
 
 
